@@ -23,7 +23,7 @@ function Page3() {
                     </button>
                 </div>
                 <div className='flex-1 flex justify-center w-full '>
-                    <img src={Garagedoorman} alt='garage door' className='max-w-[500px] max-h-[500px] max-xl:max-w-[400px] max-xl:max-h-[400px] object-cover' />
+                    <img src={Garagedoorman} alt='garage door' className='max-w-[500px] max-h-[500px] max-xl:max-w-[400px] max-xl:max-h-[400px] max-sm:max-w-[300px] object-cover' />
                 </div>
             </div>
         </div>
