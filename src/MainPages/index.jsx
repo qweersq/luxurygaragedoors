@@ -12,8 +12,6 @@ import Page8 from './Page8';
 import Footer from './Footer';
 
 function Index(props) {
-
-
     return (
         <div>
                 <UpperHeader />

@@ -67,7 +67,7 @@ function Page6() {
                         // install Swiper modules
                         modules={[Navigation, Scrollbar, A11y]}
                         spaceBetween={20}
-                        slidesPerView={width > 1024 ? 3 : width > 568 ? 2 : 1}
+                        slidesPerView={width > 1024 ? 3 : width > 768 ? 2 : 1}
                         navigation
                         pagination={{ clickable: true }}
                         scrollbar={{ draggable: true }}
@@ -77,9 +77,14 @@ function Page6() {
                         <SwiperSlide>
                                 <img src={Picture1} alt='Picture 1' style={{ width: '400px', height: '220px', objectFit: 'cover', borderRadius: '20px' }} />
                         </SwiperSlide>
+                        <SwiperSlide>
+                                <img src={Picture2} alt='Picture 2' style={{ width: '400px', height: '220px', objectFit: 'cover', borderRadius: '20px' }}  />
+                        </SwiperSlide>
+                        <SwiperSlide><img src={Picture3} alt='Picture 3' style={{ width: '400px', height: '220px', objectFit: 'cover', borderRadius: '20px' }} />
+                        </SwiperSlide>
                         <SwiperSlide><img src={Picture4} alt='Picture 4' style={{ width: '400px', height: '220px', objectFit: 'cover', borderRadius: '20px' }}  /></SwiperSlide>
                         <SwiperSlide><img src={Picture6} alt='Picture 6' style={{ width: '400px', height: '220px', objectFit: 'cover', borderRadius: '20px' }}  /></SwiperSlide>
-                        {/* <SwiperSlide><img src={Picture7} alt='Picture 7' style={{ width: '400px', height: '220px', objectFit: 'cover', borderRadius: '20px' }}  /></SwiperSlide> */}
+                        <SwiperSlide><img src={Picture7} alt='Picture 7' style={{ width: '400px', height: '220px', objectFit: 'cover', borderRadius: '20px' }}  /></SwiperSlide>
                     </Swiper>
                 </div>
             </div>
