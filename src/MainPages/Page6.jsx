@@ -46,7 +46,7 @@ function Page6() {
                         <h1 className='text-4xl font-bold uppercase leading-tight'>OUR LATEST WORK PHOTOS GALLERY</h1>
                     </div>
                     <div className='flex justify-center col-span-6 w-full'>
-                        <div className="flex flex-col p-5 justify-center h-[300px] w-full transition-transform transform brightness-90 hover:brightness-100" style={{ backgroundImage: `url(${Cardlatestwork})`, backgroundPosition: 'center', borderRadius: '50px' }}>
+                        <div className="flex flex-col p-5 justify-center h-[300px] max-sm:h-[400px] w-full transition-transform transform brightness-90 hover:brightness-100" style={{ backgroundImage: `url(${Cardlatestwork})`, backgroundPosition: 'center', borderRadius: '50px' }}>
                             {/* Background */}
                             {/* <img src={Cardlatestwork} alt={`background`} className="absolute w-full inset-0 h-full object-cover rounded-[100px]" /> */}
 
