@@ -69,7 +69,7 @@ function Footer() {
                             <h1 className='text-xl font-bold'>CONTACT</h1>
                             <div className='flex gap-2 items-left'>
                                 <MdOutlinePhoneIphone className='text-2xl' />
-                                <p className='text-lg'>+64 7786-8309</p>
+                                <p className='text-lg'> 647-786-8309</p>
                             </div>
                             <div className='flex gap-2 items-left'>
                                 <IoMail className='text-xl' />
