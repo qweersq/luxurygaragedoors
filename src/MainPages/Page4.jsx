@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Garagedoorman from '../assets/images/garagedoorman.png';
 import { FaCircleArrowRight } from "react-icons/fa6";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
 import Bg2 from '../assets/images/background-tools.png';
 import Bgcard1 from '../assets/images/bg-card-1.png';
 import Bgcard2 from '../assets/images/bg-card-2.png';
@@ -12,7 +15,17 @@ import Bgcard7 from '../assets/images/bg-card-7.png';
 import Bgcard8 from '../assets/images/bg-card-8.png';
 
 
-function Page4() {
+function Page4(props) {
+    const [width, setWidth] = React.useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResizeWindow = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleResizeWindow);
+        return () => {
+            window.removeEventListener('resize', handleResizeWindow);
+        }
+    }, []);
+
     const cardData = [
         {
             picture: Bgcard1,
@@ -57,35 +70,48 @@ function Page4() {
     ];
 
     return (
-        <div>
+        <div id="experience">
             <div className='relative w-full'>
-                <img src={Bg2} alt='Background 2' className='w-full h-[500px] object-cover max-xl:h-[700px]' />
-                <div className='absolute inset-0 flex justify-center max-lg:justify-between pl-32 items-center max-xl:px-20 max-sm:px-10 max-xl:flex-col max-xl:gap-10 max-xl:mt-10 max-xl:h-[600px]'>
-                    <div className='flex-1 flex flex-col gap-8 max-w-[700px] max-xl:max-w-[1100px]'>
-                        <h1 className='text-3xl text-black font-medium uppercase leading-tight'>Mastering Garage Doors Since 2009</h1>
-                        <p className='text-md leading-9 font-light max-w-[700px] max-xl:max-w-[1100px]'>
-                        Elevate your garage with expertise since 2009! We are your trusted specialists in crafting top-notch garage door solutions. Experience unmatched service and quality at Luxury Garage Doors.
-                        </p>
-                        <button className='flex justify-center gap-2 items-center max-w-[220px] h-61 rounded-full bg-[#D74339] bg-opacity-90 px-4 py-2 hover:bg-opacity-50 transition duration-300'>
-                            <p className='text-white font-medium'>Know Us More</p>
-                            <FaCircleArrowRight className='text-white' />
-                        </button>
-                    </div>
-                    <div className='flex justify-center max-w-[1000px] w-[700px] max-xl:w-full max-xl:min-h-[280px] overflow-x-auto gap-3 ' style={{ scrollbarWidth: 'none' }}>
-                        {cardData.map((card, index) => (
-                            <div key={index} className={`rounded-xl bg-gray-300 p-4 shadow-md flex flex-col gap-1 ${index === 0 ? 'ml-[1550px] max-xl:ml-[1400px] max-lg:ml-[1600px]  max-md:ml-[1600px] max-sm:ml-[1800px]' : ''}`}>
-                                <div className="flex-1">
-                                    <div className="flex items-center justify-center">
-                                        <img src={card.picture} alt={`card${index + 1}`} className='max-w-[230px] object-cover' />
-                                    </div>
-                                </div>
-                                {/* text */}
-                                <div className="flex-1 flex flex-col justify-center items-left gap-1">
-                                    <h1 className='text-lg  text-left'>{card.title}</h1>
-                                    <p className='text-sm font-light text-left'>{card.desc}</p>
-                                </div>
-                            </div>
-                        ))}
+                <img src={Bg2} alt='Background 2' className='w-full h-[500px] object-cover max-xl:h-[700px] max-sm:h-[830px]' />
+                <div className='absolute inset-0 flex justify-center items-center'>
+                    <div className='max-w-[1280px] px-32 grid grid-cols-2 gap-4 max-xl:px-10'>
+                        <div className='flex flex-col gap-8 max-w-[500px] max-xl:col-span-2'>
+                            <h1 className='text-4xl font-bold leading-tight'>Mastering Garage Doors Since 2009</h1>
+                            <p className='text-md leading-9 font-light max-w-[500px]'>
+                                Elevate your garage with expertise since 2009! We are your trusted specialists in crafting top-notch garage door solutions. Experience unmatched service and quality at Luxury Garage Doors.
+                            </p>
+                            <button className='flex justify-center gap-2 items-center max-w-[220px] h-61 rounded-full bg-[#D74339] bg-opacity-90 px-4 py-2 hover:bg-opacity-50 transition duration-300'>
+                                <p className='text-white font-medium'>Know Us More</p>
+                                <FaCircleArrowRight className='text-white' />
+                            </button>
+                        </div>
+                        <div className='max-w-[1000px] max-xl:col-span-2'>
+                            <Swiper
+                                // install Swiper modules
+                                spaceBetween={10}
+                                slidesPerView={width > 1024 ? 3 : width > 768 ? 3 : width > 640 ? 2 : 1}
+                                onSwiper={(swiper) => console.log(swiper)}
+                                onSlideChange={() => console.log('slide change')}
+                                className='h-full'
+                            >
+                                {cardData.map((card, index) => (
+                                    <SwiperSlide key={index} style={{ width:"240px" }}>
+                                        <div key={index} className={`rounded-xl bg-gray-300 p-2 shadow-md flex flex-col gap-1 `}>
+                                            <div className="flex-1">
+                                                <div className="flex items-center justify-center">
+                                                    <img src={card.picture} alt={`card${index + 1}`} className='object-cover' />
+                                                </div>
+                                            </div>
+                                            {/* text */}
+                                            <div className="flex-1 flex flex-col justify-center items-left gap-1">
+                                                <h1 className='text-lg  text-left'>{card.title}</h1>
+                                                <p className='text-sm font-light text-left'>{card.desc}</p>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </div>
                     </div>
                 </div>
             </div>
