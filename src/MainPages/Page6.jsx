@@ -81,8 +81,6 @@ function Page6() {
                     ...
                 </Swiper>
             </div>
-
-
         </div>
     );
 }
