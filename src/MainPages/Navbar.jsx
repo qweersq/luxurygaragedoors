@@ -32,9 +32,9 @@ const Navbar = (props) => {
 
     return (
         <nav className='bg-[#E2E2E2] p-4'>
-            <div className={`container mx-auto flex items-center justify-between ${isMenuOpen ? 'flex-col' : 'flex-row'}`}>
+            <div className={`container mx-auto flex items-center justify-between`}>
                 {!isMenuOpen && (<>
-                    <div className='flex items-center'>
+                    <div className='flex items-center max-xl:min-w-[150px]'>
                         <div className='text-white font-bold text-xl'>
                             <img src={LuxuryGarageDoorsLogo}
                                 className={`h-10`}
@@ -43,35 +43,37 @@ const Navbar = (props) => {
                     </div>
 
                     {/* Hamburger Icon for Tablet & Mobile */}
-                    <div className='lg:hidden'>
+                    {/* <div className='lg:hidden'>
                         <FaBars
                             className={`text-red cursor-pointer`}
                             size={24}
                             onClick={handleToggleMenu}
                         />
-                    </div>
+                    </div> */}
                 </>
                 )}
 
 
                 {/* Navigation Menu */}
-                <div className={`lg:flex items-center gap-6 ${isMenuOpen ? 'flex flex-col ' : 'hidden'}`}>
+                <div className={`lg:flex items-center gap-6 flex max-xl:overflow-x-auto`} style={{ scrollbarWidth:"none" }}>
                     {isMenuOpen && (
-                        <div className='lg:hidden flex gap-2 cursor-pointer' onClick={handleToggleMenu}>
+                        <>
+                            {/* <div className='lg:hidden flex gap-2 cursor-pointer' onClick={handleToggleMenu}>
                             <IoMdCloseCircleOutline
                                 className={`text-red `}
                                 size={24}
                             />
                             Close
-                        </div>
+                        </div> */}
+                        </>
                     )}
-                    <ul className='flex flex-col lg:flex-row lg:items-center gap-10 mt-3'>
+                    <ul className='flex flex-row lg:flex-row lg:items-center gap-10 mt-3'>
                         {menuData.map((menu) => (
-                            <li key={menu.id} className='mb-4 relative'>
+                            <li key={menu.id} className='mb-4 relative '>
                                 <a
                                     href={menu.link}
                                     onClick={handleMenuClick}
-                                    className='text-black text-center relative group'
+                                    className='text-black text-center relative group whitespace-nowrap' 
                                 >
                                     {menu.label}
                                     <span className='absolute left-0 right-0 top-0 mt-[-28px] h-1 bg-red-500 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100'></span>
@@ -79,7 +81,7 @@ const Navbar = (props) => {
                             </li>
                         ))}
                     </ul>
-                    <button className='bg-[#D74339] text-white px-4 py-2 rounded-md hover:bg-[#eb5348] transition-colors duration-300' onClick={() => window.open('https://wa.me/6477868309' + '?text=Hello%20Luxury%20Garage%20Doors%20Team%2C%20I%20would%20like%20to%20request%20a%20quote%20for%20my%20garage%20door%20project.', '_blank')}>
+                    <button className='bg-[#D74339] text-white px-4 py-2 rounded-md whitespace-nowrap hover:bg-[#eb5348] transition-colors duration-300' onClick={() => window.open('https://wa.me/6477868309' + '?text=Hello%20Luxury%20Garage%20Doors%20Team%2C%20I%20would%20like%20to%20request%20a%20quote%20for%20my%20garage%20door%20project.', '_blank')}>
                         Get a Quote
                     </button>
                 </div>
