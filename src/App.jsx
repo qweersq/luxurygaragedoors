@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import MainPages from './MainPages'
 // import MainPagesSeparates from './MainPagesSeparates'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -11,6 +13,7 @@ function App() {
 
   return (
     <>
+      <ToastContainer autoClose={2000} />
         {/* <MainPagesSeparates /> */}
         <MainPages />
     </>

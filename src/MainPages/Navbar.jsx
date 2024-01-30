@@ -14,8 +14,9 @@ const Navbar = (props) => {
         { id: 1, label: 'Home', link: '#home' },
         { id: 2, label: 'About Us', link: '#about' },
         { id: 3, label: 'Service & Repairs', link: '#service' },
-        { id: 4, label: 'Gallery', link: '#gallery' },
-        { id: 5, label: 'Contact', link: '#contact' },
+        { id: 4, label: 'Residental Doors', link: '#service' },
+        { id: 6, label: 'Gallery', link: '#gallery' },
+        { id: 7, label: 'Contact', link: '#contact' },
     ];
 
     const handleMenuClick = (event) => {

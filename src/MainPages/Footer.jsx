@@ -73,7 +73,7 @@ function Footer() {
                             </div>
                             <div className='flex gap-2 items-left'>
                                 <IoMail className='text-xl' />
-                                <p className='text-sm'>luxurygaragedoors@gmail.com</p>
+                                <p className='text-sm'>contact@luxurygaragedoors.ca</p>
                             </div>
                         </div>
                         <div className='flex flex-col gap-3'>
