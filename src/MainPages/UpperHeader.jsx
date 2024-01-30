@@ -6,7 +6,7 @@ import { MdOutlinePhoneAndroid } from "react-icons/md";
 
 
 function UpperHeader() {
-    const texts = ['Covering the entire GTA region', '24/7', 'Affordable Prices', 'Best Quality', 'Satisfaction Guaranteed'];
+    const texts = ['Covering the entire GTA region', '24/7 Service', 'Affordable Prices', 'Best Quality', 'Satisfaction Guaranteed'];
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
     useEffect(() => {
