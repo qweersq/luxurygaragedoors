@@ -56,7 +56,7 @@ function Footer() {
                     <div className='col-span-1 w-full max-md:col-span-3'>
                         <div className='bg-[#C7C6C6]  flex flex-col items-center p-4 text-black rounded-tl-[50px] rounded-br-[50px] flex justify-center gap-2'>
                             <img src={LuxuryGarageDoorsLogo} alt="" className='h-[70px] w-[250px]' />
-                            <p className='font-light text-justify'>Explore luxury garage doors at 1 Bittersweet Road, Brampton. Stylish solutions for homes and businesses. Visit for the perfect blend of aesthetics and durability.</p>
+                            <p className='font-light '>Explore luxury garage doors at 1 Bittersweet Road, Brampton. Stylish solutions for homes and businesses. Visit for the perfect blend of aesthetics and durability.</p>
                             <div className='flex gap-2 justify-start w-full'>
                                 <FaInstagramSquare className='text-[#D74339] text-2xl' />
                                 <FaFacebook className='text-[#D74339] text-2xl' />
