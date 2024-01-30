@@ -26,12 +26,12 @@ function Footer() {
 
     return (
         <div>
-            <div className='flex justify-center mt-[-130px] hover:brightness-110 transition duration-300' onClick={() => window.open('https://maps.app.goo.gl/L8GZeo14eFWy4oTT9', '_blank')} style={{ cursor: 'pointer' }}>
+            <div className='flex justify-center mt-[-130px] hover:brightness-110 transition duration-300' onClick={() => window.open('https://maps.app.goo.gl/VpFfCRAHu7RQRUUTA', '_blank')} style={{ cursor: 'pointer' }}>
                 <div className=' max-w-[1280px] w-[1280px] h-[250px] px-32 max-lg:px-10'>
                     <div className="relative w-full h-full overflow-hidden rounded-[30px] shadow-md">
                         <iframe
                             title="Google Maps"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.7133595550135!2d-79.78089830839795!3d43.6541316965913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b1523041145d5%3A0xd24c887e271e603e!2s1%20Bittersweet%20Rd%2C%20Brampton%2C%20ON%20L6Y%200G8%2C%20Canada!5e0!3m2!1sen!2sid!4v1706601167705!5m2!1sen!2sid"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.713354584199!2d-79.77602739999999!3d43.654131799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b1523041145d5%3A0xd24c887e271e603e!2s1%20Bittersweet%20Rd%2C%20Brampton%2C%20ON%20L6Y%200G8%2C%20Canada!5e0!3m2!1sen!2sid!4v1706601924051!5m2!1sen!2sid"
                             width="100%"
                             height="100%"
                             style={{ border: '0' }}

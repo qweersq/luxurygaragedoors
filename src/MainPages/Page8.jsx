@@ -42,6 +42,10 @@ function Page8() {
                                             <input type="text" className='w-full h-10  rounded-lg px-3 py-2 text-white bg-[#464646] ' />
                                         </div>
                                         <div className='col-span-4'>
+                                            <p className='text-xl font-medium'>Phone</p>
+                                            <input type="text" className='w-full h-10  rounded-lg px-3 py-2 text-white bg-[#464646] ' />
+                                        </div>
+                                        <div className='col-span-4'>
                                             <p className='text-xl font-medium'>Email Address</p>
                                             <input type="text" className='w-full h-10  rounded-lg px-3 py-2 text-white bg-[#464646] ' />
                                         </div>
