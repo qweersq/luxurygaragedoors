@@ -71,7 +71,7 @@ function Page7() {
 
     return (
         <div id='testimonial'>
-            <div className='bg-[#E2E2E2] flex justify-center'>
+            <div className='bg-[#E2E2E2] flex justify-center h-auto pb-20 max-lg:pb-40'>
                 <div className='max-w-[1280px] grid grid-cols-3 max-md:grid-cols-6 gap-4 flex gap-10 text-black px-32 py-20 max-lg:flex-col max-md:p-10 max-sm:p-10 max-xl:p-20'>
                     <div className='col-span-3 max-md:col-span-6 flex-5 flex flex-col max-w-[1000px] gap-5'>
                         <div className='flex items-center gap-2'>

@@ -71,19 +71,19 @@ function Page4(props) {
 
     return (
         <div id="experience">
-            <div className='relative w-full'>
-                <img src={Bg2} alt='Background 2' className='w-full h-[500px] object-cover max-xl:h-[700px] max-sm:h-[830px]' />
-                <div className='absolute inset-0 flex justify-center items-center'>
+            <div className='relative w-full bg-white py-20' style={{ backgroundImage: `url(${Bg2})`, backgroundPosition: 'center', backgroundSize: 'cover' }}>
+                {/* <img src={Bg2} alt='Background' className='' /> */}
+                <div className='flex justify-center items-center'>
                     <div className='max-w-[1280px] px-32 grid grid-cols-2 gap-4 max-xl:px-10'>
                         <div className='flex flex-col gap-8 max-w-[500px] max-xl:col-span-2'>
                             <h1 className='text-4xl font-bold leading-tight'>Mastering Garage Doors Since 2009</h1>
                             <p className='text-md leading-9 font-light max-w-[500px]'>
                                 Elevate your garage with expertise since 2009! We are your trusted specialists in crafting top-notch garage door solutions. Experience unmatched service and quality at Luxury Garage Doors.
                             </p>
-                            <button className='flex justify-center gap-2 items-center max-w-[220px] h-61 rounded-full bg-[#D74339] bg-opacity-90 px-4 py-2 hover:bg-opacity-50 transition duration-300'>
+                            {/* <button className='flex justify-center gap-2 items-center max-w-[220px] h-61 rounded-full bg-[#D74339] bg-opacity-90 px-4 py-2 hover:bg-opacity-50 transition duration-300'>
                                 <p className='text-white font-medium'>Know Us More</p>
                                 <FaCircleArrowRight className='text-white' />
-                            </button>
+                            </button> */}
                         </div>
                         <div className='max-w-[1000px] max-xl:col-span-2'>
                             <Swiper

@@ -3,6 +3,7 @@ import Garagedoorman from '../assets/images/garagedoorman.png';
 import { FaCircleArrowRight } from "react-icons/fa6";
 import Cardlatestwork from '../assets/images/cardlatestwork.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useNavigate } from 'react-router-dom';
 
 import Picture1 from '../assets/images/abd1.jpg';
 import Picture2 from '../assets/images/abd2.jpeg';
@@ -10,6 +11,7 @@ import Picture3 from '../assets/images/abd3.jpg';
 import Picture4 from '../assets/images/abd4.jpg';
 import Picture6 from '../assets/images/abd6.jpg';
 import Picture7 from '../assets/images/abd7.jpg';
+
 
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
@@ -22,7 +24,7 @@ import 'swiper/css/scrollbar';
 
 
 function Page6() {
-
+    const navigate = useNavigate();
     const [width, setWidth] = React.useState(window.innerWidth);
 
     useEffect(() => {
@@ -54,7 +56,9 @@ function Page6() {
                             <div className="z-10 flex flex-col justify-center gap-3 max-w-[500px] p-10">
                                 <h1 className='text-3xl text-white font-semibold opacity-80'>Explore Our Diverse Collection of Garage Doors!</h1>
                                 <span className='text-lg text-white font-light'>Stylish, reliable garage doors at Luxury Garage Doors. Elevate your space effortlessly.</span>
-                                <button className='flex justify-center gap-2 items-center max-w-[200px] h-61 rounded-full bg-white bg-opacity-70 px-4 py-2 hover:bg-opacity-90 transition duration-300'>
+                                <button
+                                    onClick={() => navigate('/contact')}
+                                    className='flex justify-center gap-2 items-center max-w-[200px] h-61 rounded-full bg-white bg-opacity-70 px-4 py-2 hover:bg-opacity-90 transition duration-300'>
                                     <p className='text-[#D74339] font-bold opacity-60'>Discuss Now</p>
                                 </button>
                             </div>
@@ -75,10 +79,10 @@ function Page6() {
                         onSlideChange={() => console.log('slide change')}
                     >
                         <SwiperSlide>
-                                <img src={Picture1} alt='Picture 1' style={{ width: '400px', height: '220px', objectFit: 'cover', borderRadius: '20px' }} />
+                            <img src={Picture1} alt='Picture 1' style={{ width: '400px', height: '220px', objectFit: 'cover', borderRadius: '20px' }} />
                         </SwiperSlide>
-                        <SwiperSlide><img src={Picture4} alt='Picture 4' style={{ width: '400px', height: '220px', objectFit: 'cover', borderRadius: '20px' }}  /></SwiperSlide>
-                        <SwiperSlide><img src={Picture6} alt='Picture 6' style={{ width: '400px', height: '220px', objectFit: 'cover', borderRadius: '20px' }}  /></SwiperSlide>
+                        <SwiperSlide><img src={Picture4} alt='Picture 4' style={{ width: '400px', height: '220px', objectFit: 'cover', borderRadius: '20px' }} /></SwiperSlide>
+                        <SwiperSlide><img src={Picture6} alt='Picture 6' style={{ width: '400px', height: '220px', objectFit: 'cover', borderRadius: '20px' }} /></SwiperSlide>
                         {/* <SwiperSlide><img src={Picture7} alt='Picture 7' style={{ width: '400px', height: '220px', objectFit: 'cover', borderRadius: '20px' }}  /></SwiperSlide> */}
                     </Swiper>
                 </div>

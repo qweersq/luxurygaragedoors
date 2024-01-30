@@ -1,34 +1,47 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaBars } from 'react-icons/fa'; // Hamburger icon
 import LuxuryGarageDoorsLogo from '../assets/icon/luxurygaragedoorslogo.png';
 import { IoMdCloseCircleOutline } from "react-icons/io";
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = (props) => {
     const [isMenuOpen, setMenuOpen] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const currentPath = location.pathname;
+
 
     const handleToggleMenu = () => {
         setMenuOpen(!isMenuOpen);
     };
 
     const menuData = [
-        { id: 1, label: 'Home', link: '#home' },
-        { id: 2, label: 'About Us', link: '#about' },
-        { id: 3, label: 'Service & Repairs', link: '#service' },
-        { id: 4, label: 'Residental Doors', link: '#service' },
-        { id: 6, label: 'Gallery', link: '#gallery' },
-        { id: 7, label: 'Contact', link: '#contact' },
+        { id: 1, label: 'Home', link: '/' },
+        { id: 2, label: 'About Us', link: '/about' },
+        { id: 3, label: 'Service & Repairs', link: '/service' },
+        { id: 4, label: 'Garage Doors', link: '/garage-doors' },
+        { id: 8, label: 'Review', link: '/review' },
+        { id: 6, label: 'Gallery', link: '/gallery' },
+        { id: 7, label: 'Contact', link: '/contact' },
     ];
 
-    const handleMenuClick = (event) => {
-        event.preventDefault(); // Prevent default link behavior
-        const targetId = event.target.getAttribute('href').substring(1); // Get the target ID from the link
+    const handleMenuClick = (menu) => {
+        // event.preventDefault(); // Prevent default link behavior
+        // const targetId = event.target.getAttribute('href').substring(1); // Get the target ID from the link
 
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-            setMenuOpen(false); // Close the menu after clicking a menu item
-        }
+        // const targetElement = document.getElementById(targetId);
+        // if (targetElement) {
+        //     targetElement.scrollIntoView({ behavior: 'smooth' });
+        //     setMenuOpen(false); // Close the menu after clicking a menu item
+        // }
+
+        // Navigate to the link
+        navigate(menu.link);
     };
+
+    useEffect(() => {
+        console.log('currentPath', currentPath);
+    }, [currentPath]);
 
     return (
         <nav className='bg-[#E2E2E2] p-4'>
@@ -55,7 +68,7 @@ const Navbar = (props) => {
 
 
                 {/* Navigation Menu */}
-                <div className={`lg:flex items-center gap-6 flex max-xl:overflow-x-auto`} style={{ scrollbarWidth:"none" }}>
+                <div className={`lg:flex items-center gap-6 flex max-xl:overflow-x-auto`} style={{ scrollbarWidth: "none" }}>
                     {isMenuOpen && (
                         <>
                             {/* <div className='lg:hidden flex gap-2 cursor-pointer' onClick={handleToggleMenu}>
@@ -69,19 +82,21 @@ const Navbar = (props) => {
                     )}
                     <ul className='flex flex-row lg:flex-row lg:items-center gap-10 mt-3'>
                         {menuData.map((menu) => (
-                            <li key={menu.id} className='mb-4 relative '>
-                                <a
-                                    href={menu.link}
-                                    onClick={handleMenuClick}
-                                    className='text-black text-center relative group whitespace-nowrap' 
+                            <li key={menu.id} className={`mb-4 relative transition-colors duration-300`}>
+                                <button
+                                    // href={menu.link}
+                                    onClick={() => handleMenuClick(menu)}
+                                    className={`text-black text-center relative group whitespace-nowrap ${currentPath === menu.link ? 'text-red-700' : 'text-black'} hover:text-red-700 transition-colors duration-300`}
                                 >
                                     {menu.label}
                                     <span className='absolute left-0 right-0 top-0 mt-[-28px] h-1 bg-red-500 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100'></span>
-                                </a>
+                                </button>
                             </li>
                         ))}
                     </ul>
-                    <button className='bg-[#D74339] text-white px-4 py-2 rounded-md whitespace-nowrap hover:bg-[#eb5348] transition-colors duration-300' onClick={() => window.open('https://wa.me/6477868309' + '?text=Hello%20Luxury%20Garage%20Doors%20Team%2C%20I%20would%20like%20to%20request%20a%20quote%20for%20my%20garage%20door%20project.', '_blank')}>
+                    <button
+                        onClick={() => navigate('/contact')}
+                        className='bg-[#D74339] text-white px-4 py-2 rounded-md whitespace-nowrap hover:bg-[#eb5348] transition-colors duration-300'>
                         Get a Quote
                     </button>
                 </div>

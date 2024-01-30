@@ -25,7 +25,7 @@ function Page8() {
             // Prepare template parameters for EmailJS
             const templateParams = {
                 from_name: `${values.firstName} ${values.lastName}`,
-                to_email: 'hadad.akbar@binus.ac.id',
+                to_email: 'contact@luxurygaragedoors.ca',
                 message: `
                     First Name: ${values.firstName}
                     Last Name: ${values.lastName}
@@ -53,10 +53,10 @@ function Page8() {
 
     return (
         <div id='contact'>
-            <div className='bg-[#2A2A2A] pb-40 z-0' style={{ backgroundImage: `url(${BgForm})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className='bg-[#2A2A2A] z-0' style={{ backgroundImage: `url(${BgForm})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
 
                 <div className='flex py-20 justify-center items-center text-center text-white'>
-                    <div className='max-w-[1280px] px-32 flex flex-col justify-center items-center max-lg:px-10'>
+                    <div className='max-w-[1280px] px-32 flex flex-col justify-center items-center max-lg:px-10 max-sm:px-5'>
                         {/* content */}
 
                         {/* form */}

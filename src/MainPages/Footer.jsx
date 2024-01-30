@@ -4,6 +4,7 @@ import BgForm from '../assets/images/bg-form.png';
 import { MdOutlinePhoneIphone } from "react-icons/md";
 import { IoMail } from "react-icons/io5";
 import { MdOutlineArrowRight } from "react-icons/md";
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -13,6 +14,7 @@ import { FaFacebook } from "react-icons/fa";
 
 
 function Footer() {
+    const navigate = useNavigate();
 
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId);
@@ -26,7 +28,7 @@ function Footer() {
 
     return (
         <div>
-            <div className='flex justify-center mt-[-130px] hover:brightness-110 transition duration-300' onClick={() => window.open('https://maps.app.goo.gl/VpFfCRAHu7RQRUUTA', '_blank')} style={{ cursor: 'pointer' }}>
+            {/* <div className='flex justify-center mt-[-130px] hover:brightness-110 transition duration-300' onClick={() => window.open('https://maps.app.goo.gl/VpFfCRAHu7RQRUUTA', '_blank')} style={{ cursor: 'pointer' }}>
                 <div className=' max-w-[1280px] w-[1280px] h-[250px] px-32 max-lg:px-10'>
                     <div className="relative w-full h-full overflow-hidden rounded-[30px] shadow-md">
                         <iframe
@@ -49,10 +51,10 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
-            <div className='bg-[#2A2A2A] w-full z-0 mt-[-120px] z-[12] flex justify-center'>
-                <div className='grid grid-cols-3 max-w-[1580px] w-[1580px] flex justify-center gap-10 text-white px-32 mt-[100px] pt-40 pb-10 max-lg:flex-col max-md:p-10 max-sm:p-10 max-xl:p-20'>
+            <div className='bg-[#2A2A2A] w-full z-0 z-[12] flex justify-center'>
+                <div className='grid grid-cols-3 max-w-[1580px] w-[1580px] flex justify-center gap-10 text-white px-32 mt-[100px] pb-10 max-lg:flex-col max-md:p-10 max-sm:p-10 max-xl:p-20'>
                     <div className='col-span-1 w-full max-md:col-span-3'>
                         <div className='bg-[#C7C6C6]  flex flex-col items-center p-4 text-black rounded-tl-[50px] rounded-br-[50px] flex justify-center gap-2'>
                             <img src={LuxuryGarageDoorsLogo} alt="" className='h-[70px] w-[250px]' />
@@ -71,7 +73,10 @@ function Footer() {
                                 <MdOutlinePhoneIphone className='text-2xl' />
                                 <p className='text-lg'> 647-786-8309</p>
                             </div>
-                            <div className='flex gap-2 items-left'>
+                            <div className='flex gap-2 items-left'
+                                style={{ cursor: 'pointer' }}
+                                onClick={() => navigate('/contact')}
+                            >
                                 <IoMail className='text-xl' />
                                 <p className='text-sm'>contact@luxurygaragedoors.ca</p>
                             </div>
@@ -96,7 +101,7 @@ function Footer() {
                                 <div className='flex flex-col gap-5 items-left'>
                                     <div
                                         className='flex gap-2'
-                                        onClick={() => scrollToSection('home')}
+                                        onClick={() => navigate('/')}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         <MdOutlineArrowRight className='text-2xl text-[#595959]' />
@@ -104,7 +109,7 @@ function Footer() {
                                     </div>
                                     <div
                                         className='flex gap-2'
-                                        onClick={() => scrollToSection('about')}
+                                        onClick={() => navigate('/about')}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         <MdOutlineArrowRight className='text-2xl text-[#595959]' />
@@ -112,7 +117,7 @@ function Footer() {
                                     </div>
                                     <div
                                         className='flex gap-2'
-                                        onClick={() => scrollToSection('service')}
+                                        onClick={() => navigate('/service')}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         <MdOutlineArrowRight className='text-2xl text-[#595959]' />
@@ -123,7 +128,7 @@ function Footer() {
                                 <div className='flex flex-col gap-5 items-left'>
                                     <div
                                         className='flex gap-2'
-                                        onClick={() => scrollToSection('contact')}
+                                        onClick={() => navigate('/contact')}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         <MdOutlineArrowRight className='text-2xl text-[#595959]' />
@@ -131,7 +136,7 @@ function Footer() {
                                     </div>
                                     <div
                                         className='flex gap-2'
-                                        onClick={() => scrollToSection('gallery')}
+                                        onClick={() => navigate('/gallery')}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         <MdOutlineArrowRight className='text-2xl text-[#595959]' />
