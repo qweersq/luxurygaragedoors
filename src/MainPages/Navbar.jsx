@@ -22,7 +22,7 @@ const Navbar = (props) => {
         { id: 4, label: 'Garage Doors', link: '/garage-doors' },
         { id: 8, label: 'Review', link: '/review' },
         { id: 6, label: 'Gallery', link: '/gallery' },
-        { id: 7, label: 'Contact', link: '/contact' },
+
     ];
 
     const handleMenuClick = (menu) => {

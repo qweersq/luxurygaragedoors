@@ -71,7 +71,7 @@ function Footer() {
                             <h1 className='text-xl font-bold'>CONTACT</h1>
                             <div className='flex gap-2 items-left'>
                                 <MdOutlinePhoneIphone className='text-2xl' />
-                                <p className='text-lg'> 647-786-8309</p>
+                                <a href='tel:+6477868309' className='text-white'>647-786-8309</a>
                             </div>
                             <div className='flex gap-2 items-left'
                                 style={{ cursor: 'pointer' }}
