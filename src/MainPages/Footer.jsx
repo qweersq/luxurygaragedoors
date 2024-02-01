@@ -151,7 +151,7 @@ function Footer() {
             </div>
 
             <div className='bg-black h-[50px] flex justify-center items-center'>
-                <p className='text-white items-center'>© 2023 Luxury Garage Doors.</p>
+                <p className='text-white items-center'>© 2024 Luxury Garage Doors.</p>
             </div>
         </div >
     );
