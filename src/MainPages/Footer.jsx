@@ -12,6 +12,11 @@ import LuxuryGarageDoorsLogo from '../assets/icon/luxurygaragedoorslogo.png';
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 
+import { FaPhone } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
+
+
 
 function Footer() {
     const navigate = useNavigate();
@@ -52,6 +57,19 @@ function Footer() {
                     </div>
                 </div>
             </div> */}
+
+            <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-white  p-1 rounded-full sm:hidden">
+                <div className="flex items-center justify-center">
+                    <button className="text-blue-500 p-1 rounded-full mx-8 flex flex-col items-center" onClick={() => window.open('tel:+6477868309')}>
+                        <FaPhone className="h-5 w-5" />
+                        Phone
+                    </button>
+                    <button className="text-green-500 p-1 rounded-full mx-8 flex flex-col items-center" onClick={() => navigate('/contact')}>
+                        <MdEmail className="h-6 w-6" />
+                        Email
+                    </button>
+                </div>
+            </div>
 
             <div className='bg-[#2A2A2A] w-full z-0 z-[12] flex justify-center'>
                 <div className='grid grid-cols-3 max-w-[1580px] w-[1580px] flex justify-center gap-10 text-white px-32 mt-[100px] pb-10 max-lg:flex-col max-md:p-10 max-sm:p-10 max-xl:p-20'>
