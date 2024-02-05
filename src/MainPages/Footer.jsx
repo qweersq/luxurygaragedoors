@@ -58,13 +58,13 @@ function Footer() {
                 </div>
             </div> */}
 
-            <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-white  p-1 rounded-full sm:hidden">
-                <div className="flex items-center justify-center">
-                    <button className="text-blue-500 p-1 rounded-full mx-8 flex flex-col items-center" onClick={() => window.open('tel:+6477868309')}>
+            <div className="fixed bottom-0 left-1/2 transform w-full -translate-x-1/2 bg-white p-1 sm:hidden">
+                <div className="grid-cols-2 flex justify-around">
+                    <button className="col-span-1 text-blue-500 p-1 rounded-full mx-8 flex flex-col items-center" onClick={() => window.open('tel:+6477868309')}>
                         <FaPhone className="h-5 w-5" />
                         Phone
                     </button>
-                    <button className="text-green-500 p-1 rounded-full mx-8 flex flex-col items-center" onClick={() => navigate('/contact')}>
+                    <button className="col-span-1 text-green-500 p-1 rounded-full mx-8 flex flex-col items-center" onClick={() => navigate('/contact')}>
                         <MdEmail className="h-6 w-6" />
                         Email
                     </button>
