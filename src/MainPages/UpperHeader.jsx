@@ -55,7 +55,7 @@ function UpperHeader() {
                 {/* Phone */}
                 <div className='flex gap-2 items-center'>
                     <MdOutlinePhoneAndroid className='scale-150 text-white' />
-                    <a href='tel:+6477868309' className='text-white'>647-786-8309</a>
+                    <a href='tel:+1(647)7868309' className='text-white'>Ali: 647-786-8309</a>
                 </div>
 
             </div>
